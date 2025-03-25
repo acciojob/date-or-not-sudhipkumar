@@ -5,6 +5,12 @@ var isDate = function (input) {
 	if (input instanceof Date && !isNaN(input.getTime())) {
     return true;
   }
+
+	 // Check if the input is a valid date string or timestamp
+  if (typeof input === "string" || typeof input === "number") {
+    const parsedDate = new Date(input);
+    return !isNaN(parsedDate.getTime());
+  }
 };
 
 // Do not change the code below.
