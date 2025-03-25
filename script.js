@@ -11,6 +11,9 @@ var isDate = function (input) {
     const parsedDate = new Date(input);
     return !isNaN(parsedDate.getTime());
   }
+
+	// If none of the above conditions are met, return false
+  return false;
 };
 
 // Do not change the code below.
